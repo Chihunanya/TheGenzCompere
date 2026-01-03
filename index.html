@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TheGenzCompere | Ruka Dinma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+:root{
+    --bg:#0f0f0f;
+    --text:#f1f1f1;
+    --red:#b11226;
+    --brown:#c9a18a;
+    --card:#1b1b1b;
+}
+
+.light{
+    --bg:#ffffff;
+    --text:#333;
+    --card:#f6f6f6;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+}
+
+h1,h2,h3{
+    font-family:"Playfair Display",serif;
+    color:var(--brown);
+}
+
+section{padding:80px 8%;}
+
+/* HEADER */
+header{
+    position:absolute;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:10;
+}
+header h2{color:#fff;}
+.toggle{
+    background:#fff;
+    color:#000;
+    padding:8px 14px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("hero-bg.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+}
+.hero h1{
+    font-size:3rem;
+    color:#fff;
+}
+.hero span{color:var(--red);}
+.hero p{max-width:650px;margin:20px 0;}
+.hero a{
+    display:inline-block;
+    margin-right:10px;
+    margin-top:10px;
+    padding:12px 25px;
+    background:var(--red);
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+.about img{
+    width:100%;
+    border-radius:14px;
+}
+
+/* GRID + CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+.card{
+    background:var(--card);
+    padding:25px;
+    border-left:5px solid var(--red);
+    border-radius:10px;
+}
+
+/* GALLERY */
+.gallery img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* VIDEO */
+.video-grid video{
+    width:100%;
+    border-radius:12px;
+}
+
+/* FORM */
+form{max-width:650px;margin:auto;}
+input,textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:none;
+}
+button{
+    width:100%;
+    padding:14px;
+    background:var(--red);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+/* CONNECT */
+.connect .card{text-align:center;}
+.connect i{
+    font-size:2rem;
+    color:var(--red);
+    margin-bottom:10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    padding:15px;
+    border-radius:50%;
+    font-size:26px;
+    z-index:99;
+}
+
+/* FOOTER */
+footer{
+    background:#140b08;
+    text-align:center;
+    padding:20px;
+    color:#fff;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .about{grid-template-columns:1fr;}
+    .hero h1{font-size:2.3rem;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>TheGenzCompere</h2>
+    <div class="toggle" onclick="toggleMode()">☀️ / 🌙</div>
+</header>
+
+<section class="hero">
+<div>
+    <h1>Onyiriuka Gracefilled <span>Chidinma</span></h1>
+    <h3>Also known as <strong>Ruka Dinma</strong></h3>
+    <p>Professional Compere | Marketing Strategist | Content Creator | Law Graduate</p>
+    <a href="#booking">Book Me</a>
+    <a href="#connect">Connect</a>
+</div>
+</section>
+
+<!-- ABOUT ME (FULL – NOT REMOVED) -->
+<section>
+<div class="about">
+<div>
+<h2>About Me</h2>
+<p>
+Onyiriuka Gracefilled Chidinma, fondly known as Ruka Dinma also known as TheGenzCompere, is a multifaceted individual with a passion for excellence.
+As a marketing specialist, she leverages her expertise in advertising, promotion, public relations, and sales to
+empower businesses and help them reach new heights.
+<br><br>
+Beyond her marketing prowess, Ruka Dinma is a talented compere, bringing energy and charm to various events and
+occasions. Her versatility extends to the world of gadgetry, where she runs a successful business providing
+content creation tools.
+<br><br>
+Currently, Ruka Dinma is a Law Graduate from the prestigious University of Nigeria, Enugu campus.
+Her drive to pursue a career in law is rooted in her passion for justice and advocacy.
+<br><br>
+Above all, Ruka Dinma is a devout individual who finds strength and inspiration in her faith.
+With a unique blend of marketing expertise, public speaking talent, entrepreneurial spirit, and legal acumen,
+she is a force to be reckoned with.
+<br><br>
+She is a result-driven marketing specialist and an event compere with a proven track record of delivering engaging events and empowering businesses. 
+She is not afraid to fail or grow through correction. With over 9,000 Instagram followers, she brings a strong online presence to any brand or event.
+</p>
+</div>
+<img src="about.jpg">
+</div>
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Services I Offer</h2>
+<div class="grid">
+<div class="card">Professional Compere / Event Host</div>
+<div class="card">Marketing Strategist</div>
+<div class="card">Content Creator</div>
+<div class="card">Law Graduate</div>
+</div>
+</section>
+
+<!-- IMAGE HIGHLIGHTS (NOT REMOVED) -->
+<section>
+<h2>Event Highlights (Photos)</h2>
+<div class="grid gallery">
+<img src="event1.jpg">
+<img src="event2.jpg">
+<img src="event3.jpg">
+<img src="event4.jpg">
+</div>
+</section>
+
+<!-- VIDEO HIGHLIGHTS -->
+<section>
+<h2>Event Highlights (Videos)</h2>
+<div class="grid video-grid">
+<video controls src="videos/event1.mp4"></video>
+<video controls src="videos/event2.mp4"></video>
+<video controls src="videos/event3.mp4"></video>
+</div>
+</section>
+
+<section id="booking" class="booking-section">
+  <h2>Book TheGenzCompere</h2>
+  <p>Fill the form below and I’ll get back to you shortly.</p>
+
+  <form 
+    action="https://formspree.io/f/mbdlkbjq" 
+    method="POST" 
+    class="booking-form"
+  >
+    <input type="text" name="name" placeholder="Your Full Name" required>
+
+    <input type="email" name="email" placeholder="Your Email Address" required>
+
+    <input type="tel" name="phone" placeholder="Phone Number (WhatsApp preferred)" required>
+
+    <select name="event_type" required>
+      <option value="">Select Event Type</option>
+      <option>Wedding</option>
+      <option>Birthday Party</option>
+      <option>Corporate Event</option>
+      <option>School Event</option>
+      <option>Concert</option>
+      <option>Other</option>
+    </select>
+
+    <input type="date" name="event_date" required>
+
+    <textarea 
+      name="message" 
+      placeholder="Tell me about your event (location, time, audience size, etc.)"
+      rows="5"
+      required
+    ></textarea>
+
+    <button type="submit">Send Booking Request</button>
+  </form>
+
+  <!-- WhatsApp Booking Button -->
+  <a 
+    href="https://wa.me/2347086823761?text=Hello%20TheGenzCompere,%20I%20want%20to%20book%20you%20for%20an%20event." 
+    class="whatsapp-booking"
+    target="_blank"
+  >
+    Book via WhatsApp
+  </a>
+</section>
+
+<!-- CONNECT -->
+<section id="connect" class="connect">
+<h2>Connect With Me</h2>
+<div class="grid">
+<div class="card">
+<i class="fab fa-instagram"></i>
+<p><a href="https://www.instagram.com/ruka_dinma" target="_blank">Instagram</a></p>
+</div>
+<div class="card">
+<i class="fab fa-linkedin"></i>
+<p><a href="https://www.linkedin.com/in/OnyiriukaGracefilled" target="_blank">LinkedIn</a></p>
+</div>
+<div class="card">
+<i class="fas fa-envelope"></i>
+<p><a href="mailto:onyiriukadinma@gmail.com">Email</a></p>
+</div>
+<div class="card">
+<i class="fab fa-whatsapp"></i>
+<p><a href="https://wa.me/2347086823761" target="_blank">WhatsApp</a></p>
+</div>
+</div>
+</section>
+
+<a href="https://wa.me/2347086823761" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+© 2025 TheGenzCompere | Ruka Dinma
+</footer>
+
+<script>
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
