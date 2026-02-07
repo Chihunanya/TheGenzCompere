@@ -17,12 +17,6 @@
     --card:#1b1b1b;
 }
 
-.light{
-    --bg:#ffffff;
-    --text:#333;
-    --card:#f6f6f6;
-}
-
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -51,13 +45,6 @@ header{
     z-index:10;
 }
 header h2{color:#fff;}
-.toggle{
-    background:#fff;
-    color:#000;
-    padding:8px 14px;
-    border-radius:20px;
-    cursor:pointer;
-}
 
 /* HERO */
 .hero{
@@ -124,7 +111,7 @@ header h2{color:#fff;}
 
 /* FORM */
 form{max-width:650px;margin:auto;}
-input,textarea{
+input,textarea,select{
     width:100%;
     padding:14px;
     margin-bottom:15px;
@@ -149,19 +136,6 @@ button{
     margin-bottom:10px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:#fff;
-    padding:15px;
-    border-radius:50%;
-    font-size:26px;
-    z-index:99;
-}
-
 /* FOOTER */
 footer{
     background:#140b08;
@@ -182,7 +156,6 @@ footer{
 
 <header>
     <h2>TheGenzCompere</h2>
-    <div class="toggle" onclick="toggleMode()">☀️ / 🌙</div>
 </header>
 
 <section class="hero">
@@ -195,29 +168,16 @@ footer{
 </div>
 </section>
 
-<!-- ABOUT ME (FULL – NOT REMOVED) -->
+<!-- ABOUT -->
 <section>
 <div class="about">
 <div>
 <h2>About Me</h2>
 <p>
 Onyiriuka Gracefilled Chidinma, fondly known as Ruka Dinma also known as TheGenzCompere, is a multifaceted individual with a passion for excellence.
-As a marketing specialist, she leverages her expertise in advertising, promotion, public relations, and sales to
-empower businesses and help them reach new heights.
-<br><br>
-Beyond her marketing prowess, Ruka Dinma is a talented compere, bringing energy and charm to various events and
-occasions. Her versatility extends to the world of gadgetry, where she runs a successful business providing
-content creation tools.
-<br><br>
-Currently, Ruka Dinma is a Law Graduate from the prestigious University of Nigeria, Enugu campus.
-Her drive to pursue a career in law is rooted in her passion for justice and advocacy.
-<br><br>
-Above all, Ruka Dinma is a devout individual who finds strength and inspiration in her faith.
-With a unique blend of marketing expertise, public speaking talent, entrepreneurial spirit, and legal acumen,
-she is a force to be reckoned with.
 <br><br>
 She is a result-driven marketing specialist and an event compere with a proven track record of delivering engaging events and empowering businesses. 
-She is not afraid to fail or grow through correction. With over 9,000 Instagram followers, she brings a strong online presence to any brand or event.
+With over 9,000 Instagram followers, she brings a strong online presence to any brand or event.
 </p>
 </div>
 <img src="about.jpg">
@@ -235,7 +195,7 @@ She is not afraid to fail or grow through correction. With over 9,000 Instagram 
 </div>
 </section>
 
-<!-- IMAGE HIGHLIGHTS (NOT REMOVED) -->
+<!-- IMAGE HIGHLIGHTS -->
 <section>
 <h2>Event Highlights (Photos)</h2>
 <div class="grid gallery">
@@ -256,19 +216,14 @@ She is not afraid to fail or grow through correction. With over 9,000 Instagram 
 </div>
 </section>
 
+<!-- BOOKING -->
 <section id="booking" class="booking-section">
-  <h2>Book TheGenzCompere</h2>
-  <p>Fill the form below and I’ll get back to you shortly.</p>
+<h2>Book TheGenzCompere</h2>
+<p>Fill the form below and I’ll get back to you shortly.</p>
 
-  <form 
-    action="https://formspree.io/f/mbdlkbjp" 
-    method="POST" 
-    class="booking-form"
-  >
+<form action="https://formspree.io/f/mbdlkbjp" method="POST">
     <input type="text" name="name" placeholder="Your Full Name" required>
-
     <input type="email" name="email" placeholder="Your Email Address" required>
-
     <input type="tel" name="phone" placeholder="Phone Number (WhatsApp preferred)" required>
 
     <select name="event_type" required>
@@ -283,24 +238,11 @@ She is not afraid to fail or grow through correction. With over 9,000 Instagram 
 
     <input type="date" name="event_date" required>
 
-    <textarea 
-      name="message" 
-      placeholder="Tell me about your event (location, time, audience size, etc.)"
-      rows="5"
-      required
-    ></textarea>
+    <textarea name="message" rows="5" required
+      placeholder="Tell me about your event (location, time, audience size, etc.)"></textarea>
 
     <button type="submit">Send Booking Request</button>
-  </form>
-
-  <!-- WhatsApp Booking Button -->
-  <a 
-    href="https://wa.me/2347086823761?text=Hello%20TheGenzCompere,%20I%20want%20to%20book%20you%20for%20an%20event." 
-    class="whatsapp-booking"
-    target="_blank"
-  >
-    Book via WhatsApp
-  </a>
+</form>
 </section>
 
 <!-- CONNECT -->
@@ -311,14 +253,17 @@ She is not afraid to fail or grow through correction. With over 9,000 Instagram 
 <i class="fab fa-instagram"></i>
 <p><a href="https://www.instagram.com/ruka_dinma" target="_blank">Instagram</a></p>
 </div>
+
 <div class="card">
 <i class="fab fa-linkedin"></i>
 <p><a href="https://www.linkedin.com/in/OnyiriukaGracefilled" target="_blank">LinkedIn</a></p>
 </div>
+
 <div class="card">
 <i class="fas fa-envelope"></i>
 <p><a href="mailto:onyiriukadinma@gmail.com">Email</a></p>
 </div>
+
 <div class="card">
 <i class="fab fa-whatsapp"></i>
 <p><a href="https://wa.me/2347086823761" target="_blank">WhatsApp</a></p>
@@ -326,19 +271,9 @@ She is not afraid to fail or grow through correction. With over 9,000 Instagram 
 </div>
 </section>
 
-<a href="https://wa.me/2347086823761" class="whatsapp" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
 <footer>
 © 2025 TheGenzCompere | Ruka Dinma
 </footer>
-
-<script>
-function toggleMode(){
-    document.body.classList.toggle("light");
-}
-</script>
 
 </body>
 </html>
