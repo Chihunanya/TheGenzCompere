@@ -24,6 +24,7 @@ body{
     background:var(--bg);
     color:var(--text);
     line-height:1.8;
+    scroll-behavior:smooth;
 }
 
 h1,h2,h3{
@@ -31,57 +32,99 @@ h1,h2,h3{
     color:var(--brown);
 }
 
-section{padding:80px 8%;}
+section{
+    padding:110px 10%;
+}
 
-/* HEADER */
-header{
-    position:absolute;
+/* NAVBAR */
+.navbar{
+    position:fixed;
     top:0;
     width:100%;
-    padding:20px 8%;
+    padding:18px 10%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    z-index:10;
+    background:rgba(15,15,15,0.95);
+    backdrop-filter:blur(10px);
+    z-index:100;
 }
-header h2{color:#fff;}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    letter-spacing:1px;
+    color:var(--brown);
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:var(--text);
+    font-size:0.95rem;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--red);
+}
 
 /* HERO */
 .hero{
     min-height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
     url("hero-bg.jpg") center/cover no-repeat;
     display:flex;
     align-items:center;
 }
+
 .hero h1{
-    font-size:3rem;
+    font-size:3.6rem;
+    font-weight:700;
+    line-height:1.2;
     color:#fff;
 }
+
 .hero span{color:var(--red);}
-.hero p{max-width:650px;margin:20px 0;}
+
+.hero p{
+    max-width:650px;
+    margin:20px 0;
+    font-size:1.1rem;
+    opacity:0.9;
+}
+
 .hero a{
     display:inline-block;
-    margin-right:10px;
-    margin-top:10px;
-    padding:12px 25px;
+    margin-right:12px;
+    margin-top:15px;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:500;
     background:var(--red);
     color:#fff;
     text-decoration:none;
-    border-radius:6px;
+    transition:0.3s;
+}
+
+.hero a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(177,18,38,0.6);
 }
 
 /* ABOUT */
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:50px;
     align-items:center;
 }
+
 .about img{
     width:100%;
-    border-radius:14px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* GRID + CARDS */
@@ -90,46 +133,75 @@ header h2{color:#fff;}
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
+
 .card{
     background:var(--card);
-    padding:25px;
+    padding:30px;
     border-left:5px solid var(--red);
-    border-radius:10px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.45);
 }
 
 /* GALLERY */
 .gallery img{
     width:100%;
-    border-radius:12px;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 /* VIDEO */
 .video-grid video{
     width:100%;
-    border-radius:12px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* FORM */
-form{max-width:650px;margin:auto;}
+form{
+    max-width:650px;
+    margin:auto;
+}
+
 input,textarea,select{
     width:100%;
-    padding:14px;
+    padding:15px;
     margin-bottom:15px;
-    border-radius:6px;
+    border-radius:10px;
     border:none;
+    outline:none;
+    font-size:15px;
 }
+
 button{
     width:100%;
-    padding:14px;
+    padding:15px;
     background:var(--red);
     color:#fff;
     border:none;
-    border-radius:6px;
+    border-radius:30px;
     font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    box-shadow:0 0 20px rgba(177,18,38,0.6);
 }
 
 /* CONNECT */
-.connect .card{text-align:center;}
+.connect .card{
+    text-align:center;
+}
+
 .connect i{
     font-size:2rem;
     color:var(--red);
@@ -140,24 +212,46 @@ button{
 footer{
     background:#140b08;
     text-align:center;
-    padding:20px;
+    padding:25px;
     color:#fff;
+}
+
+/* FADE ANIMATION */
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.9s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* MOBILE */
 @media(max-width:900px){
+    nav{display:none;}
     .about{grid-template-columns:1fr;}
-    .hero h1{font-size:2.3rem;}
+    .hero h1{font-size:2.4rem;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h2>TheGenzCompere</h2>
+<!-- NAVBAR -->
+<header class="navbar">
+    <h2 class="logo">TheGenzCompere</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#booking">Booking</a>
+        <a href="#connect">Connect</a>
+    </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <div>
     <h1>Onyiriuka Gracefilled <span>Chidinma</span></h1>
@@ -169,23 +263,23 @@ footer{
 </section>
 
 <!-- ABOUT -->
-<section>
+<section id="about" class="fade">
 <div class="about">
 <div>
 <h2>About Me</h2>
 <p>
 Onyiriuka Gracefilled Chidinma, fondly known as Ruka Dinma also known as TheGenzCompere, is a multifaceted individual with a passion for excellence.
 <br><br>
-She is a result-driven marketing specialist and an event compere with a proven track record of delivering engaging events and empowering businesses. 
+She is a result-driven marketing specialist and an event compere with a proven track record of delivering engaging events and empowering businesses.
 With over 9,000 Instagram followers, she brings a strong online presence to any brand or event.
 </p>
 </div>
-<img src="about.jpg">
+<img src="about.jpg" alt="About Ruka Dinma">
 </div>
 </section>
 
 <!-- SERVICES -->
-<section>
+<section id="services" class="fade">
 <h2>Services I Offer</h2>
 <div class="grid">
 <div class="card">Professional Compere / Event Host</div>
@@ -195,8 +289,8 @@ With over 9,000 Instagram followers, she brings a strong online presence to any 
 </div>
 </section>
 
-<!-- IMAGE HIGHLIGHTS -->
-<section>
+<!-- HIGHLIGHTS -->
+<section id="highlights" class="fade">
 <h2>Event Highlights (Photos)</h2>
 <div class="grid gallery">
 <img src="event1.jpg">
@@ -206,8 +300,8 @@ With over 9,000 Instagram followers, she brings a strong online presence to any 
 </div>
 </section>
 
-<!-- VIDEO HIGHLIGHTS -->
-<section>
+<!-- VIDEOS -->
+<section class="fade">
 <h2>Event Highlights (Videos)</h2>
 <div class="grid video-grid">
 <video controls src="videos/event1.mp4"></video>
@@ -217,7 +311,7 @@ With over 9,000 Instagram followers, she brings a strong online presence to any 
 </section>
 
 <!-- BOOKING -->
-<section id="booking" class="booking-section">
+<section id="booking" class="fade">
 <h2>Book TheGenzCompere</h2>
 <p>Fill the form below and I’ll get back to you shortly.</p>
 
@@ -246,7 +340,7 @@ With over 9,000 Instagram followers, she brings a strong online presence to any 
 </section>
 
 <!-- CONNECT -->
-<section id="connect" class="connect">
+<section id="connect" class="connect fade">
 <h2>Connect With Me</h2>
 <div class="grid">
 <div class="card">
@@ -274,6 +368,20 @@ With over 9,000 Instagram followers, she brings a strong online presence to any 
 <footer>
 © 2025 TheGenzCompere | Ruka Dinma
 </footer>
+
+<!-- FADE-IN SCRIPT -->
+<script>
+const fades = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+  fades.forEach((f) => {
+    const rect = f.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      f.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
